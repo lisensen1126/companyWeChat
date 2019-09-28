@@ -1,0 +1,15 @@
+@import '../config/vendor-prefixes.less';
+// css 旋转动画
+
+.rotate-animation {
+  .animation(myRotate 1.2s infinite linear);
+}
+
+@keyframes myRotate {
+  from {
+    .rotate(0)
+  }
+  to {
+    .rotate(360deg)
+  }
+}

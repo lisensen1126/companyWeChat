@@ -1,0 +1,193 @@
+@import './config/mixins/border.less';
+@import './config/mixins/border-radius.less';
+@import './base/position.less';
+@import './base/base.less';
+@import './base/margin.less';
+@import './base/padding.less';
+@import './base/utilities.less';
+@import './base/flex.less';
+
+// 经营日报和经营月报页面第一版布局一致 
+.default_content {
+  height: 7.4rem;
+  text-align: center;
+  padding-top: 2.7rem;
+  img {
+    width: 1.08rem;
+    height: 1.08rem;
+    display:inline-block;
+  }
+  div {
+    color:#A1A6B4;
+    margin-top: 0.1rem;
+  }
+}
+.daily {
+  min-height: 100vh;
+  width: 100%;
+  background: #f7f8fa;
+}
+#test {
+  height: 2.34rem;
+}
+.gray {
+  color: #a1a6b4;
+}
+.gray2 {
+  color: #4d515a;
+}
+.black {
+  color: #3d424c;
+}
+.blue {
+  color: #5e7bff;
+}
+.line-20 {
+  line-height: 0.2rem;
+}
+.line-34 {
+  line-height: 0.34rem;
+}
+.line-30 {
+  line-height: 0.3rem;
+}
+.line-52 {
+  line-height: 0.52rem;
+}
+.line-44 {
+  line-height: 0.44rem;
+}
+.list-height {
+  height: 1.2rem;
+  border-bottom: 1px solid #f5f6f9;
+}
+.letter-space {
+  letter-spacing: 0.01rem;
+  white-space: normal;
+}
+.m-r-36 {
+  margin-right: 0.36rem;
+}
+.m-l-36 {
+  margin-left: 0.36rem;
+}
+.m-t-8 {
+  margin-top: 0.08rem;
+}
+.m-t-max {
+  margin-top: 0.5rem;
+}
+.m-b-60 {
+  margin-bottom: 0.6rem;
+}
+.p-a-60 {
+  padding: 0.6rem;
+}
+.submit-btn {
+  height: 1.16rem;
+  justify-content: center;
+}
+.topHeader {
+  height: 1.65rem;
+}
+.daily-header {
+  background: url('../assets/bluebg.png') no-repeat;
+  background-size: 100% 100%;
+  height: 3.3rem;
+}
+.date-select {
+  background: transparent;
+  height: 0.6rem;
+  padding-top: 0.2rem;
+}
+.time-wrapper {
+  width: 1.78rem;
+  height: 0.4rem;
+}
+.right-arrow {
+  transform: rotateY(180deg);
+}
+.down-arrow {
+  transform: rotateX(180deg);
+}
+.date-component {
+  background-color: rgba(255, 255, 255, 0);
+  color: transparent;
+  width: 1.5rem;
+  height: 0.4rem;
+  left: 0rem;
+  z-index: 2000;
+}
+.topContainer {
+  height: auto;
+  width: calc(100% - 0.6rem);
+  background: #fff;
+  padding-bottom: 0.4rem;
+  .border-radius(4px);
+  top: 2.7rem;
+  box-shadow: 0px 12px 32px 0px rgba(35, 36, 46, 0.04);
+}
+.container {
+  background: #fff;
+  box-shadow: 0px 12px 32px 0px rgba(35, 36, 46, 0.04);
+  width: 690/100rem;
+  margin: auto;
+  margin-top: 30/100rem;
+}
+.container-50 {
+  margin-top: -50/100rem;
+}
+.chart {
+  // height: 3.54rem;
+  width: calc(100% - 0.6rem);
+  background: #fff;
+  box-shadow: 0px 12px 32px 0px rgba(35, 36, 46, 0.04);
+}
+.salse-wrapper {
+  height: 1.54rem;
+  border-bottom: 1px solid #F5F6F9;
+}
+
+.progress-box-bottom {
+  height: 0.08rem;
+  .border-radius(12px);
+  background: #e7ebff;
+  width: 100%;
+  overflow: hidden;
+}
+.progress-box-show {
+  float: left;
+  height: 0.08rem;
+  background: linear-gradient(to right, #26aaff, #5e7bff);
+}
+.modal-container {
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4964);
+  z-index: 10000;
+}
+.modal-content {
+  height: 7.78rem;
+  width: 6.68rem;
+  background: #fff;
+  .border-radius(4px);
+  box-shadow: 0px 32px 32px 0px rgba(0, 0, 0, 0.14);
+}
+.item-data {
+  line-height: 0.4rem;
+  height: 0.4rem;
+}
+.item-left-data {
+  width: 3.8rem;
+}
+.item-right-data {
+  width: 2.4rem;
+}
+.font-600 {
+  font-weight: 600;
+}
+.width-116 {
+  width: 1.16rem;
+}

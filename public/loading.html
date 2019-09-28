@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .weui-btn {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+        box-sizing: border-box;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #FFFFFF;
+        line-height: 2.55555556;
+        border-radius: 5px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        overflow: hidden;
+      }
+      .weui-btn:after {
+        content: " ";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      .btn-sub {
+        background-color: #f8f8f8;
+        color: #222222;
+      }
+      .btn-sub:not(.weui-btn_disabled):visited {
+        color: #222222;
+      }
+      .btn-sub:not(.weui-btn_disabled):active {
+        color: #222222;
+      }
+      .btn-sub.active {
+        color: #469aff;
+        background-color: transparent;
+      }
+      .btn-sub.active:not(.weui-btn_disabled):visited {
+        color: #469aff;
+      }
+      .btn-sub.active:not(.weui-btn_disabled):active {
+        color: #469aff;
+      }
+      .btn-sub.active:after {
+        border: 1px solid #469aff;
+      }
+      /*遮罩层*/
+      .mask-layer {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0);
+        z-index: 900;
+      }
+      .spinner-center {
+        position: fixed;
+        width: 100px;
+        left: 50%;
+        top: 40%;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        padding: 30px 0;
+        text-align: center;
+        font-size: 16px;
+        margin-left: -50px;
+        z-index: 1010;
+      }
+      @media screen and (max-width: 321px) {
+        .spinner-center {
+          font-size: 16px;
+        }
+      }
+      @media screen and (min-width: 321px) and (max-width: 400px) {
+        .spinner-center {
+          font-size: 17px;
+        }
+      }
+      @media screen and (min-width: 400px) {
+        .spinner-center {
+          font-size: 19px;
+        }
+      }
+      .loading-message {
+        color: #fff;
+        padding-top: 0.16rem;
+      }
+      .spinner-cc {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+      }
+      .spinner-cc div {
+        background-color: white;
+        position: absolute;
+        width: 8%;
+        height: 25%;
+        top: 60%;
+        left: 50%;
+        margin-left: -4.15%;
+        opacity: 0;
+        border-bottom-left-radius: 0.7rem 1.2rem;
+        border-bottom-right-radius: 0.7rem 1.2rem;
+        -webkit-transform-origin: center -80%;
+        -ms-transform-origin: center -80%;
+        transform-origin: center -80%;
+        -webkit-animation: fade 1s linear infinite;
+      }
+      .spinner-cc div.bar1 {
+        -webkit-transform: rotate(0deg);
+        -webkit-animation-delay: 0s;
+      }
+      .spinner-cc div.bar2 {
+        -webkit-transform: rotate(30deg);
+        -webkit-animation-delay: -0.9167s;
+      }
+      .spinner-cc div.bar3 {
+        -webkit-transform: rotate(60deg);
+        -webkit-animation-delay: -0.833s;
+      }
+      .spinner-cc div.bar4 {
+        -webkit-transform: rotate(90deg);
+        -webkit-animation-delay: -0.75s;
+      }
+      .spinner-cc div.bar5 {
+        -webkit-transform: rotate(120deg);
+        -webkit-animation-delay: -0.667s;
+      }
+      .spinner-cc div.bar6 {
+        -webkit-transform: rotate(150deg);
+        -webkit-animation-delay: -0.5833s;
+      }
+      .spinner-cc div.bar7 {
+        -webkit-transform: rotate(180deg);
+        -webkit-animation-delay: -0.5s;
+      }
+      .spinner-cc div.bar8 {
+        -webkit-transform: rotate(210deg);
+        -webkit-animation-delay: -0.41667s;
+      }
+      .spinner-cc div.bar9 {
+        -webkit-transform: rotate(240deg);
+        -webkit-animation-delay: -0.333s;
+      }
+      .spinner-cc div.bar10 {
+        -webkit-transform: rotate(270deg);
+        -webkit-animation-delay: -0.25s;
+      }
+      .spinner-cc div.bar11 {
+        -webkit-transform: rotate(300deg);
+        -webkit-animation-delay: -0.1667s;
+      }
+      .spinner-cc div.bar12 {
+        -webkit-transform: rotate(330deg);
+        -webkit-animation-delay: -0.0833s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+      .default {
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        text-align: center;
+        padding-top: 200px;
+        box-sizing: border-box;
+        display: none;
+      }
+      img.system {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+      }
+      p {
+        padding-top: 13px;
+        font-size: 14px;
+        color: #b2b2b2;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="maskLoading">
+    <div class="mask-layer"></div>
+    <div class="spinner-center">
+      <div class="spinner-cc">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+        <div class="bar7"></div>
+        <div class="bar8"></div>
+        <div class="bar9"></div>
+        <div class="bar10"></div>
+        <div class="bar11"></div>
+        <div class="bar12"></div>
+      </div>
+      <div class="loading-message">加载中</div>
+    </div>
+  </div>
+  <div class="default" id="indexDefault">
+    <img class="system" src="http://oss1.chedianai.com/images/assets/workwx-default.png" alt="">
+    <p id="defaultTip">不存在该企业</p>
+  </div>
+  <script>
+    /**
+     * ajax 请求对象创建
+     * @returns {*}
+     */
+        //步骤一:创建异步对象
+    var ajax = new XMLHttpRequest();
+    //步骤二:设置请求的url参数,参数一是请求的类型,参数二是请求的url,可以带参数,动态的传递参数starName到服务端
+    ajax.open('get','https://work.chedianai.com/comm/v1/auth/corpid_to_domain?corp_id='+(window.location.href.split("?")[1].replace("corpid=","")));
+    //步骤三:发送请求
+    ajax.send();
+    //步骤四:注册事件 onreadystatechange 状态改变就会调用
+    ajax.onreadystatechange = function () {
+      if (ajax.readyState==4 &&ajax.status==200) {
+        //步骤五 如果能够进到这个判断 说明 数据 完美的回来了,并且请求的页面是存在的
+        if (JSON.parse(ajax.responseText).data) {
+          document.getElementById("indexDefault").style.display="none";
+          document.getElementById("maskLoading").style.display="block";
+          var url = "http://"+window.location.host+"/"+JSON.parse(ajax.responseText).data.domain;
+          window.location.replace(url);
+        } else {
+          document.getElementById("indexDefault").style.display="block";
+          document.getElementById("maskLoading").style.display="none";
+          if (JSON.parse(ajax.responseText).code === 1012){
+            document.getElementById("defaultTip").innerHTML="corp_id有误";
+          } else if(JSON.parse(ajax.responseText).code === 1002) {
+            document.getElementById("defaultTip").innerHTML="不存在该企业";
+          } else if(JSON.parse(ajax.responseText).code === 1013) {
+            document.getElementById("defaultTip").innerHTML="管理员未绑定外部联系人Secret";
+          }
+        }
+      }
+    }
+  </script>
+  </body>
+</html>

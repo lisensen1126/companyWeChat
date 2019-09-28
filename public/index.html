@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="referrer" content="never">
+  <title></title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <!-- 手机调试代码-->
+  <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+  <script>
+    eruda.init();
+  </script> -->
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        dpr = 1,
+        scale = 1 / dpr;
+      var metaEl = doc.createElement('meta');
+      metaEl.name = "viewport";
+      metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale;
+      docEl.firstElementChild.appendChild(metaEl);
+      var recalc = function () {
+        var deviceWidth = docEl.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        docEl.style.fontSize = deviceWidth / 7.5 + 'px';
+      };
+      recalc();
+    })(document, window);
+  </script>
+  <iframe id="authRequestFrame" style="display: none;"></iframe>
+</body>
+
+</html>

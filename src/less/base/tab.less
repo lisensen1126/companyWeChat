@@ -1,0 +1,66 @@
+@import "../config/_variables.less";
+@import "../config/vendor-prefixes.less";
+
+//tab
+.navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  background-color: #FAFAFA;
+  .navbar__item {
+    position: relative;
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 13px 0;
+    text-align: center;
+    font-size: 15px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .navbar__item:active {
+    background-color: #EDEDED;
+  }
+  .navbar__item.bar__item_on {
+    background-color: #EAEAEA;
+  }
+  .navbar__item:after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-right: 1px solid #CCCCCC;
+    color: #CCCCCC;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+  }
+  .navbar__item:last-child:after {
+    display: none;
+  }
+}
+.navbar:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #CCCCCC;
+  color: #CCCCCC;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.border-color:after {
+  border-color: #e5e5e5;
+  color: #e5e5e5;
+}

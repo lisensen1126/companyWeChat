@@ -1,0 +1,99 @@
+// 步骤条
+.progress-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.8rem;
+  .num {
+    text-align: center;
+    line-height: 0.32rem;
+    width: 0.32rem;
+    border-radius: 0.32rem;
+    font-size: 0.16rem;
+    background: #aeb5c5;
+    color: #fff;
+    font-weight: bold;
+  }
+  .num-active {
+    background: #5e7bff;
+  }
+  .line {
+    height: 2px;
+    margin: 0 0.08rem;
+    flex: 1;
+    background: #aeb5c5;
+  }
+  .line-active {
+    background: #5e7bff;
+  }
+}
+.progress-name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.24rem;
+  color: #3d424c;
+  margin: 0.2rem 0.3rem 0 0.3rem;
+  span {
+    text-align: center;
+    flex: 1;
+  }
+}
+
+// 顶部步骤条的box
+.top-box {
+  background: #fff;
+  border-radius: 2px;
+  .progress-box {
+    padding: 0.4rem 0;
+  }
+  .detail-btn {
+    font-size: 0.24rem;
+    color: #5e7bff;
+    text-align: center;
+    line-height: 0.66rem;
+    border-top: 1px solid #f0f0f0;
+  }
+}
+
+// 按钮
+.round-btn {
+  color: #fff;
+  font-size: 0.28rem;
+  margin: 0.4rem 0;
+  border-radius: 0.38rem;
+  line-height: 0.76rem;
+  background: #5e7bff;
+  text-align: center;
+  box-shadow: 0px 12px 24px 0px rgba(94, 123, 255, 0.3);
+}
+// 标题
+.step-desc {
+  margin: 0.4rem 0.3rem 0 0.3rem;
+  .round-num {
+    display: inline-block;
+    width: 0.32rem;
+    line-height: 0.32rem;
+    background-color: #5e7bff;
+    color: #fff;
+    font-size: 0.16rem;
+    text-align: center;
+    border-radius: 0.32rem;
+    vertical-align: middle;
+    margin-right: 0.1rem;
+    font-weight: bold;
+  }
+  .desc {
+    vertical-align: middle;
+    color: #3d424c;
+    font-size: 0.32rem;
+    font-weight: bold;
+  }
+  .guide {
+    color: #8a92a2;
+    font-size: 0.24rem;
+    margin: 0.1rem 0 0.3rem 0;
+    .blue {
+      color: #5e7bff;
+    }
+  }
+}

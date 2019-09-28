@@ -1,0 +1,54 @@
+@import "../config/_variables.less";
+@import "../config/mixins/button.less";
+@import "../config/mixins/tab-focus.less";
+@import "../config/mixins/opacity.less";
+@import "../config/vendor-prefixes.less";
+
+//button base style
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: @btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @line-height-base; @btn-border-radius-base);
+  border-radius: 0.08rem;
+  .user-select(none);
+}
+
+//Button style
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #469AFF;
+  border-color: #469AFF;
+}
+.btn-sub {
+  color: #222222;
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
+}
+.btn-default {
+  color: #FFFFFF;
+  background-color: #A2AAB6;
+  border-color: #A2AAB6;
+}
+
+
+
+.btn-mini {
+  .button-size(@padding-xs-vertical,@padding-xs-horizontal,@line-height-small,@border-radius-small);
+}
+.btn-large {
+  .button-size(@padding-large-vertical,@padding-large-horizontal,@line-height-small,@border-radius-large);
+}
+
+// Block Button
+.vbtn-block {
+  display: block;
+  width: 100%;
+}

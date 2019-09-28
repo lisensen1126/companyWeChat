@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="17px" viewBox="0 0 16 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="客户管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="会员卡消费记录" transform="translate(-16.000000, -219.000000)">
+            <g id="Group-4" transform="translate(16.000000, 219.000000)">
+                <path d="M1,1 L1,16 L12,16 C13.6568542,16 15,14.6568542 15,13 L15,1 L1,1 Z" id="Rectangle-14" stroke="#444444" stroke-width="2"></path>
+                <rect id="Rectangle-15" stroke="#444444" fill="#D8D8D8" x="6.5" y="0.5" width="3" height="1"></rect>
+                <rect id="Rectangle-16" fill="#444444" x="4" y="5" width="8" height="2"></rect>
+                <rect id="Rectangle-16" fill="#444444" x="4" y="9" width="5" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
